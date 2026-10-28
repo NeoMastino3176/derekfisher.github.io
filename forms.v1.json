@@ -1,0 +1,1596 @@
+{
+  "schemaVersion": "1.1.0",
+  "hosts": {
+    "account.rogers.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "ng-component form[method='POST']:has(input[autocomplete='username'])",
+            "password-form form[method='POST']#LoginForm"
+          ],
+          "fields": {
+            "email": [
+              "ng-component form[method='POST'] input[type='email'][autocomplete='username'][title='Enter your registered username here']"
+            ],
+            "password": [
+              "password-form form[method='POST']#LoginForm input[type='password'][autocomplete='current-password'][aria-label='Password']"
+            ]
+          },
+          "actions": {
+            "next": [
+              "ng-component form[method='POST']:has(input[autocomplete='username']) button[role='button'][type='submit']"
+            ],
+            "submit": [
+              "password-form form[method='POST']#LoginForm button[role='button'][type='submit']"
+            ]
+          }
+        }
+      ]
+    },
+    "accountview.lpl.com": {
+      "pathnames": {
+        "/web/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "app-signin app-username form:has(input#username[name='username'])",
+                "app-signin app-password form:has(input#password[name='password'])"
+              ],
+              "fields": {
+                "username": [
+                  "app-signin app-username form:has(input#username[name='username']) input#username[name='username'][type='search']"
+                ],
+                "password": [
+                  "app-signin app-password form:has(input#password[name='password']) input#password[name='password'][type='password']"
+                ]
+              },
+              "actions": {
+                "next": [
+                  "app-signin app-username form:has(input#username[name='username']) button.btn-sign-in"
+                ],
+                "submit": [
+                  "app-signin app-password form:has(input#password[name='password']) button.btn-sign-in[type='submit']"
+                ]
+              }
+            },
+            {
+              "category": "account-creation",
+              "container": [
+                "app-signup form[method='post']"
+              ],
+              "fields": {
+                "email": [
+                  "app-signup form[method='post'] input#inputEmail[name='inputUserName'][type='email']"
+                ],
+                "phone": [
+                  "app-signup form[method='post'] input#tel[name='inputPhone']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "app-signup form[method='post'] div.findMeButton button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "app.composer.trade": {
+      "pathnames": {
+        "/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#login-form"
+              ],
+              "fields": {
+                "email": [
+                  "form#login-form input[name='email'][type='email']"
+                ],
+                "password": [
+                  "form#login-form input[name='password'][type='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#login-form button#log-in-button[type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/register": {
+          "forms": [
+            {
+              "category": "account-creation",
+              "container": [
+                "form#signup-form"
+              ],
+              "fields": {
+                "email": [
+                  "form#signup-form input[name='email'][type='email']"
+                ],
+                "newPassword": [
+                  "form#signup-form input[name='password'][type='password'][autocomplete='new-password']"
+                ],
+                "phone": [
+                  "form#signup-form input[type='tel'][autocomplete='tel']"
+                ],
+                "consentUser": [
+                  "form#signup-form div.group:has(p.leading-tight) button[role='checkbox'][type='button']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#signup-form button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "auth.hbomax.com": {
+      "pathnames": {
+        "/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form"
+              ],
+              "fields": {
+                "email": [
+                  "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form input#sign-in-phoneEmail-input[type='email'][autocomplete='email'][name='phoneEmail']"
+                ],
+                "phoneCountryCode": [
+                  "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form gi-phone-country-select select[autocomplete='tel-country-code']"
+                ],
+                "phone": [
+                  "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form input#sign-in-phoneEmail-input[type='email'][autocomplete='email'][name='phoneEmail']",
+                  "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form input#sign-in-phoneEmail-input[type='tel'][autocomplete='tel-national'][name='phoneEmail']"
+                ],
+                "password": [
+                  "gi-login.hydrated >>> gi-sign-in-password.hydrated >>> gi-form.hydrated form.sign-in-password:not(:has(div.hide-input-group)) input#sign-in-password-password-input[type='password'][autocomplete='new-password'][name='password']"
+                ]
+              },
+              "actions": {
+                "next": [
+                  "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form button[type='submit'][data-testid='gisdk.gi-sign-in.continue_button']"
+                ],
+                "submit": [
+                  "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form button[type='submit'][data-testid='gisdk.gi-sign-in.continue_button']"
+                ],
+                "reset": [
+                  "gi-login.hydrated >>> gi-sign-in-combo.hydrated >>> gi-form.hydrated form.form button#clear-sign-in-phoneEmail-input[type='button'][data-testid='form-input-clear-button']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "bankofamerica.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "div#signin-form"
+          ],
+          "fields": {
+            "username": [
+              "input#oid"
+            ],
+            "password": [
+              "input#pass"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "button#secure-signin-submit"
+            ]
+          }
+        }
+      ]
+    },
+    "christianbook.com": {
+      "forms": [
+        {
+          "category": "search",
+          "container": [
+            "form#search-form"
+          ],
+          "fields": {
+            "searchTerm": [
+              "form#search-form input#Ntt[name='Ntt'][type='text']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "form#search-form button#search[name='search'][type='submit']"
+            ]
+          }
+        },
+        {
+          "category": "signup",
+          "container": [
+            "form#footer-email-signup-form"
+          ],
+          "fields": {
+            "email": [
+              "form#footer-email-signup-form input[name='nav-email-address'][type='email']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "form#footer-email-signup-form input[name='signup'][type='submit']"
+            ]
+          }
+        }
+      ],
+      "pathnames": {
+        "/apps/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#login_form div.CBD-Form-Login-main"
+              ],
+              "fields": {
+                "email": [
+                  "form#login_form div.CBD-Form-Login-main input#email[name='email'][type='email']"
+                ],
+                "password": [
+                  "form#login_form div.CBD-Form-Login-main input#password[name='password'][type='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#login_form div.CBD-Form-Login-main button[name='login_continue.x'][type='submit']"
+                ]
+              }
+            },
+            {
+              "category": "account-creation",
+              "container": [
+                "form#login_form div.CBD-Form-Login-alternate"
+              ],
+              "fields": {
+                "email": [
+                  "form#login_form div.CBD-Form-Login-alternate input#new_cust_email[name='new_cust_email'][type='email']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#login_form div.CBD-Form-Login-alternate button#create_account[name='login_continue.x'][type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/apps/account": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#login_form div.CBD-Form-Login-main"
+              ],
+              "fields": {
+                "email": [
+                  "form#login_form div.CBD-Form-Login-main input#email[name='email'][type='email']"
+                ],
+                "password": [
+                  "form#login_form div.CBD-Form-Login-main input#password[name='password'][type='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#login_form div.CBD-Form-Login-main button[name='login_continue.x'][type='submit']"
+                ]
+              }
+            },
+            {
+              "category": "account-creation",
+              "container": [
+                "form#login_form div.CBD-Form-Login-alternate"
+              ],
+              "fields": {
+                "email": [
+                  "form#login_form div.CBD-Form-Login-alternate input#new_cust_email[name='new_cust_email'][type='email']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#login_form div.CBD-Form-Login-alternate button#create_account[name='login_continue.x'][type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/apps/account/setup": {
+          "forms": [
+            {
+              "category": "account-creation",
+              "container": [
+                "form#account-setup div.CBD-Account-Setup"
+              ],
+              "fields": {
+                "email": [
+                  "form#account-setup input#email[name='email'][type='text']"
+                ],
+                "newPassword": [
+                  "form#account-setup input#password[name='password'][type='password']",
+                  "form#account-setup input#verify_password[name='verify_password'][type='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#account-setup button[name='create_account'][type='submit']"
+                ]
+              }
+            },
+            {
+              "category": "address",
+              "container": [
+                "form#account-setup div#billing"
+              ],
+              "fields": {
+                "firstName": [
+                  "form#account-setup input#billing_first_name[name='billing_first_name']"
+                ],
+                "lastName": [
+                  "form#account-setup input#billing_last_name[name='billing_last_name']"
+                ],
+                "organization": [
+                  "form#account-setup input#billing_organization[name='billing_organization']"
+                ],
+                "country": [
+                  "form#account-setup select#billing_nation[name='billing_nation']"
+                ],
+                "addressLine1": [
+                  "form#account-setup input#billing_street[name='billing_street']"
+                ],
+                "addressLine2": [
+                  "form#account-setup input#billing_auxiliary[name='billing_auxiliary']"
+                ],
+                "postalCode": [
+                  "form#account-setup input#billing_zip[name='billing_zip']"
+                ],
+                "addressLevel2": [
+                  "form#account-setup input#billing_city[name='billing_city']"
+                ],
+                "addressLevel1": [
+                  "form#account-setup select#billing_state-usa[name='billing_state']",
+                  "form#account-setup select#billing_state-canada",
+                  "form#account-setup select#billing_state-all",
+                  "form#account-setup input#billing_state-intl"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "eservices.cipc.co.za": {
+      "pathnames": {
+        "/Login.aspx": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#aspnetForm[name='aspnetForm']:has(input#ctl00_cntMain_txtCustCode)"
+              ],
+              "fields": {
+                "username": [
+                  "form#aspnetForm input#ctl00_cntMain_txtCustCode[name='ctl00$cntMain$txtCustCode'][type='text']"
+                ],
+                "password": [
+                  "form#aspnetForm input#ctl00_cntMain_txtPassword[name='ctl00$cntMain$txtPassword'][type='password']"
+                ],
+                "consentTerms": [
+                  "form#aspnetForm a#ctl00_cntMain_chkTerms_ToggleButton"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#aspnetForm input#ctl00_cntMain_btnLogin[name='ctl00$cntMain$btnLogin'][type='image']"
+                ]
+              }
+            }
+          ]
+        },
+        "/login.aspx": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#aspnetForm[name='aspnetForm']:has(input#ctl00_cntMain_txtCustCode)"
+              ],
+              "fields": {
+                "username": [
+                  "form#aspnetForm input#ctl00_cntMain_txtCustCode[name='ctl00$cntMain$txtCustCode'][type='text']"
+                ],
+                "password": [
+                  "form#aspnetForm input#ctl00_cntMain_txtPassword[name='ctl00$cntMain$txtPassword'][type='password']"
+                ],
+                "consentTerms": [
+                  "form#aspnetForm a#ctl00_cntMain_chkTerms_ToggleButton"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#aspnetForm input#ctl00_cntMain_btnLogin[name='ctl00$cntMain$btnLogin'][type='image']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "eversource.com": {
+      "pathnames": {
+        "/security/account/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form[name='loginForm']"
+              ],
+              "fields": {
+                "email": [
+                  "form[name='loginForm'] input#Email\\/Username[name='email']"
+                ],
+                "password": [
+                  "form[name='loginForm'] input#password[name='password']"
+                ],
+                "username": [
+                  "form[name='loginForm'] input#Email\\/Username[name='email']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form[name='loginForm'] button#signIn[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "identity.enterprise.spendclarity.visa.com": {
+      "pathnames": {
+        "/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form[name='login'][data-testid='login-form']"
+              ],
+              "fields": {
+                "password": [
+                  "dse-input#password >>> input#password[type='password']"
+                ],
+                "username": [
+                  "dse-input#username >>> input#username[type='text']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "dse-button#submit-button >>> button[data-testid='submit-button']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "login.coinbase.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "div#two-factor form"
+          ],
+          "fields": {
+            "email": [
+              "div#two-factor form input[name='email-input']"
+            ],
+            "password": [
+              "div#two-factor form input#current-password"
+            ]
+          },
+          "actions": {
+            "next": [
+              "div#two-factor form button[name='email-submit-button']"
+            ],
+            "submit": [
+              "div#two-factor form button[name='password-submit-button']"
+            ]
+          }
+        }
+      ]
+    },
+    "datacamp.com": {
+      "pathnames": {
+        "/": {
+          "forms": [
+            {
+              "category": "account-creation",
+              "container": [
+                "form[action='/users'][data-testid='form-signup']"
+              ],
+              "fields": {
+                "username": [
+                  "input#intro-user_email"
+                ],
+                "newPassword": [
+                  "input#intro-user_password"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "button[data-trackid='form-signup-cta'][type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/users/sign_up": {
+          "forms": [
+            {
+              "category": "account-creation",
+              "container": [
+                "form#user_register_form"
+              ],
+              "fields": {
+                "username": [
+                  "input#user_email"
+                ],
+                "newPassword": [
+                  "input#user_password"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "input#user_submit"
+                ]
+              }
+            }
+          ]
+        },
+        "/tracks/career": {
+          "forms": [
+            {
+              "category": "account-creation",
+              "container": [
+                "form[action='/users'][data-testid='form-signup']"
+              ],
+              "fields": {
+                "username": [
+                  "input#-user_email"
+                ],
+                "newPassword": [
+                  "input#-user_password"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "button[data-trackid='form-signup-cta'][type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "accounts.crowdin.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "form#login_form"
+          ],
+          "fields": {
+            "username": [
+              "form#login_form input#login_login"
+            ],
+            "password": [
+              "form#login_form input#login_password"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "form#login_form button[type='submit']"
+            ]
+          }
+        }
+      ],
+      "pathnames": {
+        "/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#login_form"
+              ],
+              "fields": {
+                "username": [
+                  "form#login_form input#login_login"
+                ],
+                "password": [
+                  "form#login_form input#login_password"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#login_form button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "accounts.google.com": {
+      "pathnames": {
+        "/v3/signin/identifier": {
+          "forms": [
+            {
+              "category": "account-login",
+              "fields": {
+                "email": [
+                  "input#identifierId[name='identifier'][type='text'][autocomplete='username webauthn']"
+                ],
+                "phone": [
+                  "input#identifierId[name='identifier'][type='text'][autocomplete='username webauthn']"
+                ],
+                "username": [
+                  "input#identifierId[name='identifier'][type='text'][autocomplete='username webauthn']"
+                ]
+              },
+              "actions": {
+                "next": [
+                  "div#identifierNext button[type='button']"
+                ]
+              }
+            }
+          ]
+        },
+        "/v3/signin/challenge/pwd": {
+          "forms": [
+            {
+              "category": "account-login",
+              "fields": {
+                "password": [
+                  "input[name='Passwd']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "div#passwordNext button[type='button']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "banking.easybank.de": {
+      "pathnames": {
+        "/logintransaction/firstlevel": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "div.login-form__fields"
+              ],
+              "fields": {
+                "username": [
+                  "div.login-form__fields vc-text-box#UserName[autocomplete='username'] input#UserName-field"
+                ],
+                "password": [
+                  "div.login-form__fields vc-text-box#Password input#Password-field"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "vc-tabitem#OnlineBanking vc-button-group#FirstLevelButtonGroup vc-button button#btn-NextButton"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "factorio.com": {
+      "pathnames": {
+        "/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "div.panel.small-center form[action='/login']"
+              ],
+              "fields": {
+                "username": [
+                  "input#username_or_email"
+                ],
+                "password": [
+                  "input#password"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "div.panel.small-center form[action='/login'] button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "firstfedcu.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "div.online-banking-form iframe#tethered_frame >>> form#tethered-login"
+          ],
+          "fields": {
+            "username": [
+              "div.online-banking-form iframe#tethered_frame >>> form#tethered-login input#username"
+            ],
+            "password": [
+              "div.online-banking-form iframe#tethered_frame >>> form#tethered-login input#credential"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div.online-banking-form iframe#tethered_frame >>> form#tethered-login button#submit[type='submit']"
+            ]
+          }
+        }
+      ]
+    },
+    "ecams.geico.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "form[id^='flt-semantic-node-']:has(input#email)"
+          ],
+          "fields": {
+            "username": [
+              "form[id^='flt-semantic-node-'] input#email"
+            ],
+            "password": [
+              "form[id^='flt-semantic-node-'] input#current-password"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "form[id^='flt-semantic-node-']:has(input#email) flt-semantics[role='button'][flt-semantics-identifier='null_Button_Default_Title']"
+            ]
+          }
+        }
+      ]
+    },
+    "emcins.com": {
+      "pathnames": {
+        "/emc/default.asp": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form.primary-auth-form[data-se='o-form']:has(input#okta-signin-username)"
+              ],
+              "fields": {
+                "username": [
+                  "form.primary-auth-form[data-se='o-form'] input#okta-signin-username[name='username'][type='text']"
+                ],
+                "password": [
+                  "form.primary-auth-form[data-se='o-form'] input#okta-signin-password[name='password'][type='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form.primary-auth-form[data-se='o-form'] input#okta-signin-submit[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "myprime.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "div#sign-in-form form[role='form']"
+          ],
+          "fields": {
+            "username": [
+              "div#sign-in-form form[role='form'] input#username[name='sign-in-form-username'][type='text']"
+            ],
+            "password": [
+              "div#sign-in-form form[role='form'] input#password[name='sign-in-form-password'][type='password']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div#sign-in-form form[role='form'] button#sign-in-button-submit[type='button']"
+            ]
+          }
+        }
+      ]
+    },
+    "oge.com": {
+      "pathnames": {
+        "/": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#loginForm[name='loginForm']"
+              ],
+              "fields": {
+                "email": [
+                  "form#loginForm[name='loginForm'] input#userName[name='userName'][type='text']"
+                ],
+                "password": [
+                  "form#loginForm[name='loginForm'] input#signInoverlayPassword[name='password'][type='password']"
+                ],
+                "consentUser": [
+                  "form#loginForm[name='loginForm'] input#chkRememberMeP[name='chkRememberMeP'][type='checkbox']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#loginForm[name='loginForm'] button#osa_btn_login_new[name='btn_login_new'][type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/web/portal": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#loginForm[name='loginForm']"
+              ],
+              "fields": {
+                "email": [
+                  "form#loginForm[name='loginForm'] input#userName[name='userName'][type='text']"
+                ],
+                "password": [
+                  "form#loginForm[name='loginForm'] input#signInoverlayPassword[name='password'][type='password']"
+                ],
+                "consentUser": [
+                  "form#loginForm[name='loginForm'] input#chkRememberMeP[name='chkRememberMeP'][type='checkbox']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#loginForm[name='loginForm'] button#osa_btn_login_new[name='btn_login_new'][type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/web/portal/label_ord/signin": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#loginForm[name='loginForm']"
+              ],
+              "fields": {
+                "email": [
+                  "form#loginForm[name='loginForm'] input#userName[name='userName'][type='text']"
+                ],
+                "password": [
+                  "form#loginForm[name='loginForm'] input#signInoverlayPassword[name='password'][type='password']"
+                ],
+                "consentUser": [
+                  "form#loginForm[name='loginForm'] input#chkRememberMeP[name='chkRememberMeP'][type='checkbox']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#loginForm[name='loginForm'] button#osa_btn_login_new[name='btn_login_new'][type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "open.texanscu.org": {
+      "forms": [
+        {
+          "category": "account-creation",
+          "container": [
+            "form[method='POST'][action='/default-form-action']:has(input[name='person.firstName'])"
+          ],
+          "fields": {
+            "firstName": [
+              "form[method='POST'][action='/default-form-action'] input[name='person.firstName'][type='text']"
+            ],
+            "middleName": [
+              "form[method='POST'][action='/default-form-action'] input[name='person.middleName'][type='text']"
+            ],
+            "lastName": [
+              "form[method='POST'][action='/default-form-action'] input[name='person.lastName'][type='text']"
+            ],
+            "honorificSuffix": [
+              "form[method='POST'][action='/default-form-action'] input[id='person.suffix'][role='combobox']",
+              "form[method='POST'][action='/default-form-action'] input[name='person.suffix'][type='hidden']"
+            ],
+            "email": [
+              "form[method='POST'][action='/default-form-action'] input[name='person.emailPrimary'][type='email']"
+            ],
+            "phone": [
+              "form[method='POST'][action='/default-form-action'] input[name='person.phoneMobile'][type='text']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "form[method='POST'][action='/default-form-action'] button[type='submit'][data-testid='button-2.0']"
+            ]
+          }
+        }
+      ]
+    },
+    "ml.com": {
+      "pathnames": {
+        "/": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "div#signin-form"
+              ],
+              "fields": {
+                "username": [
+                  "div#signin-form input#oid[name='oid']"
+                ],
+                "password": [
+                  "div#signin-form input[name='pass'][type='password']"
+                ],
+                "consentUser": [
+                  "div#signin-form input#saveOnlineID[name='saveOnlineID']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "div#signin-form button#secure-signin-submit"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "patreon.com": {
+      "pathnames": {
+        "/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "main#main-content form"
+              ],
+              "fields": {
+                "username": [
+                  "main#main-content form span[class^='EmailPasswordScreen'] ~ div input[autocomplete='email'][name='email']"
+                ],
+                "password": [
+                  "main#main-content form input[autocomplete='current-password'][name='current-password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "main#main-content form button[type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/settings/account": {
+          "forms": [
+            {
+              "category": "account-update",
+              "container": [
+                "div[class^='ChangePassword'] form"
+              ],
+              "fields": {
+                "password": [
+                  "div[class^='ChangePassword'] form input[type='password'][name='oldPassword']"
+                ],
+                "newPassword": [
+                  "div[class^='ChangePassword'] form input[type='password'][name='newPassword']",
+                  "div[class^='ChangePassword'] form input[type='password'][name='confirmPassword']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "div[class^='ChangePassword'] form div[class$='submitButtonWrapper'] button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rowleycompany.com": {
+      "pathnames": {
+        "/checkout/cart": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "aside.loginpopup form.form-login"
+              ],
+              "fields": {
+                "username": [
+                  "input#login-email"
+                ],
+                "password": [
+                  "aside.loginpopup input[name='login[password]']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "aside.loginpopup form.form-login button[type='submit']"
+                ]
+              }
+            },
+            {
+              "category": "account-creation",
+              "container": [
+                "form#create-form"
+              ],
+              "fields": {
+                "firstName": [
+                  "input[name='firstname']"
+                ],
+                "lastName": [
+                  "input[name='lastname']"
+                ],
+                "username": [
+                  "form#create-form input[name='email']"
+                ],
+                "newPassword": [
+                  "input#create-password",
+                  "input#create-password-confirmation"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "#create-form button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "shiftadmin.com": {
+      "pathnames": {
+        "/login.php": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form[name='main'][action='login.php']"
+              ],
+              "fields": {
+                "email": [
+                  "input#inputEmail1[name='iEmail'][type='email']"
+                ],
+                "password": [
+                  "input#inputPassword1[name='iPassword'][type='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form[name='main'][action='login.php'] button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "store.steampowered.com": {
+      "forms": [
+        {
+          "category": "search",
+          "container": [
+            "div[role='navigation'] form[role='search']"
+          ],
+          "fields": {
+            "searchTerm": [
+              "div[role='navigation'] form[role='search'] input[name='term']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div[role='navigation'] form[role='search'] button[type='submit']"
+            ]
+          }
+        }
+      ],
+      "pathnames": {
+        "/login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "div[data-featuretarget='login'] form[class]:has(input[type='password'])"
+              ],
+              "fields": {
+                "username": [
+                  "div[data-featuretarget='login'] form[class]:has(input[type='password']) input[type='text']"
+                ],
+                "password": [
+                  "div[data-featuretarget='login'] form[class] input[type='password']"
+                ],
+                "consentUser": [
+                  "div[data-featuretarget='login'] form[class] div[role='checkbox']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "div[data-featuretarget='login'] form[class]:has(input[type='password']) button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "texanscu.org": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "form.olb__form[action*='Authentication/Username']"
+          ],
+          "fields": {
+            "username": [
+              "form.olb__form[action*='Authentication/Username'] input#UserName[name='UserName'][type='text']"
+            ],
+            "password": [
+              "form.olb__form[action*='Authentication/Username'] input#Password[name='Password'][type='password']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "form.olb__form[action*='Authentication/Username'] button[type='submit'][aria-label='Log In']"
+            ]
+          }
+        },
+        {
+          "category": "search",
+          "container": [
+            "form.kdx-site-search.site-search"
+          ],
+          "fields": {
+            "searchTerm": [
+              "form.kdx-site-search.site-search input.form-control[placeholder='Search'][type='text']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "form.kdx-site-search.site-search button#site-search-icon[type='submit']"
+            ]
+          }
+        }
+      ]
+    },
+    "tiktok.com": {
+      "forms": [
+        {
+          "category": "account-login",
+          "container": [
+            "div#loginContainer form"
+          ],
+          "fields": {
+            "email": [
+              "div#loginContainer form input[autocomplete='webauthn'][name='username']"
+            ],
+            "password": [
+              "div#loginContainer form input[autocomplete='new-password']"
+            ],
+            "phone": [
+              "div#loginContainer form input[autocomplete='username'][name='mobile']"
+            ],
+            "username": [
+              "div#loginContainer form input[autocomplete='webauthn'][name='username']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div#loginContainer form button[type='submit']"
+            ]
+          }
+        },
+        {
+          "category": "account-creation",
+          "container": [
+            "div#loginContainer form"
+          ],
+          "fields": {
+            "phone": [
+              "div#loginContainer form input[name='mobile']"
+            ]
+          },
+          "actions": {
+            "next": [
+              "div#loginContainer form button[type='submit']"
+            ]
+          }
+        },
+        {
+          "category": "account-creation",
+          "container": [
+            "div#loginContainer form"
+          ],
+          "fields": {
+            "email": [
+              "div#loginContainer form input[name='email']"
+            ],
+            "newPassword": [
+              "div#loginContainer form:has(input[name='email']) input[type='password']"
+            ],
+            "username": [
+              "div#loginContainer form input[name='username']"
+            ]
+          },
+          "actions": {
+            "next": [
+              "div#loginContainer form button[type='submit']"
+            ]
+          }
+        }
+      ]
+    },
+    "trip.com": {
+      "forms": [
+        {
+          "category": "account-creation",
+          "container": [
+            "div#ibu_login_online form[class]"
+          ],
+          "fields": {
+            "newPassword": [
+              "div#ibu_login_online form[class]:has(div[class*='register-content-wrapper']) input[autocomplete='new-password']"
+            ],
+            "username": [
+              "div#ibu_login_online form[class] input[placeholder='Please enter an email address']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div#ibu_login_online form[class]:has(div[class*='register-content-wrapper']) button[type='submit']"
+            ],
+            "previous": [
+              "div#ibu_login_online div#ibu_login_back"
+            ],
+            "cancel": [
+              "div#ibu_login_online div#ibu_login_close"
+            ],
+            "reset": [
+              "div#ibu_login_online form[class]:has(div[class*='register-content-wrapper']) div#ibu-password-group div#ibu_login_input_clear"
+            ]
+          }
+        },
+        {
+          "category": "account-login",
+          "container": [
+            "div#ibu_login_online form[class]"
+          ],
+          "fields": {
+            "password": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) input[autocomplete='new-password']"
+            ],
+            "oneTimeCode": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) input[autocomplete='one-time-code']"
+            ],
+            "username": [
+              "div#ibu_login_online form[class] input[placeholder='Please enter an email address']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) button[type='submit']"
+            ],
+            "previous": [
+              "div#ibu_login_online div#ibu_login_back"
+            ],
+            "cancel": [
+              "div#ibu_login_online div#ibu_login_close"
+            ],
+            "reset": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) div#ibu_login_input_clear"
+            ]
+          }
+        }
+      ]
+    },
+    "us.trip.com": {
+      "forms": [
+        {
+          "category": "account-creation",
+          "container": [
+            "div#ibu_login_online form[class]"
+          ],
+          "fields": {
+            "newPassword": [
+              "div#ibu_login_online form[class]:has(div[class*='register-content-wrapper']) input[autocomplete='new-password']"
+            ],
+            "username": [
+              "div#ibu_login_online form[class] input[placeholder='Please enter an email address']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div#ibu_login_online form[class]:has(div[class*='register-content-wrapper']) button[type='submit']"
+            ],
+            "previous": [
+              "div#ibu_login_online div#ibu_login_back"
+            ],
+            "cancel": [
+              "div#ibu_login_online div#ibu_login_close"
+            ],
+            "reset": [
+              "div#ibu_login_online form[class]:has(div[class*='register-content-wrapper']) div#ibu-password-group div#ibu_login_input_clear"
+            ]
+          }
+        },
+        {
+          "category": "account-login",
+          "container": [
+            "div#ibu_login_online form[class]"
+          ],
+          "fields": {
+            "password": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) input[autocomplete='new-password']"
+            ],
+            "oneTimeCode": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) input[autocomplete='one-time-code']"
+            ],
+            "username": [
+              "div#ibu_login_online form[class] input[placeholder='Please enter an email address']"
+            ]
+          },
+          "actions": {
+            "submit": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) button[type='submit']"
+            ],
+            "previous": [
+              "div#ibu_login_online div#ibu_login_back"
+            ],
+            "cancel": [
+              "div#ibu_login_online div#ibu_login_close"
+            ],
+            "reset": [
+              "div#ibu_login_online form[class]:has(div[class*='content-account-wrapper']) div#ibu_login_input_clear"
+            ]
+          }
+        }
+      ]
+    },
+    "webapp.sjcfl.us": {
+      "pathnames": {
+        "/WebappExtLogin/default.aspx": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form#form1.page-wrapper:has(input#usernameoremail)"
+              ],
+              "fields": {
+                "email": [
+                  "form#form1.page-wrapper input#usernameoremail[name='ctl00$ContentPlaceHolder1$usernameoremail'][type='text']"
+                ],
+                "username": [
+                  "form#form1.page-wrapper input#usernameoremail[name='ctl00$ContentPlaceHolder1$usernameoremail'][type='text']"
+                ],
+                "password": [
+                  "form#form1.page-wrapper input#password[name='ctl00$ContentPlaceHolder1$password'][type='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form#form1.page-wrapper input#cmdLogin[name='ctl00$ContentPlaceHolder1$cmdLogin'][type='button']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "webtests.dev": {
+      "pathnames": {
+        "/forms/login/ambiguous-inputs": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "div.ambiguous-inputs-container"
+              ],
+              "fields": {
+                "password": [
+                  "input[name='p']"
+                ],
+                "username": [
+                  "input[name='u']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "div.ambiguous-inputs-container button#ambiguous-inputs-go"
+                ]
+              }
+            }
+          ]
+        },
+        "/forms/login/iframe-login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "iframe#test-iframe >>> form[action='/login']"
+              ],
+              "fields": {
+                "username": [
+                  "iframe#test-iframe >>> form[action='/login'] input#username"
+                ],
+                "password": [
+                  "iframe#test-iframe >>> form[action='/login'] input#password"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "iframe#test-iframe >>> form[action='/login'] button[type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/forms/login/iframe-sandboxed-login": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "iframe#test-iframe[sandbox] >>> form[action='/login']"
+              ],
+              "fields": {
+                "username": [
+                  "iframe#test-iframe[sandbox] >>> form[action='/login'] input#username"
+                ],
+                "password": [
+                  "iframe#test-iframe[sandbox] >>> form[action='/login'] input#password"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "iframe#test-iframe[sandbox] >>> form[action='/login'] button[type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/forms/login/simple-spec": null,
+        "/forms/login/shadow-root-inputs-closed": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "div#form-container >>> form[action='/login']"
+              ],
+              "fields": {
+                "username": [
+                  "div#form-container >>> form[action='/login'] > div:nth-of-type(1) > div >>> input[name='username']"
+                ],
+                "password": [
+                  "div#form-container >>> form[action='/login'] > div:nth-of-type(2) > div >>> input[name='password']"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "div#form-container >>> form[action='/login'] button[type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/forms/login/security-code-multi-input": {
+          "forms": [
+            {
+              "category": "account-login",
+              "container": [
+                "form[action='/login']"
+              ],
+              "fields": {
+                "oneTimeCode": [
+                  [
+                    "input[name='otp-code-0']",
+                    "input[name='otp-code-1']",
+                    "input[name='otp-code-2']",
+                    "input[name='otp-code-3']",
+                    "input[name='otp-code-4']",
+                    "input[name='otp-code-5']"
+                  ]
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "form[action='/login'] button[type='submit']"
+                ]
+              }
+            }
+          ]
+        },
+        "/forms/create/create-account-extended-spec": {
+          "forms": [
+            {
+              "category": "account-creation",
+              "container": [
+                "form[action='/account']"
+              ],
+              "fields": {
+                "email": [
+                  "input#email"
+                ],
+                "newPassword": [
+                  "input#password"
+                ],
+                "fullName": [
+                  "input#full-name"
+                ],
+                "organization": [
+                  "input#company-name"
+                ],
+                "phone": [
+                  "input#phone-number"
+                ],
+                "addressLine1": [
+                  "input#address"
+                ],
+                "addressLine2": [
+                  "input#address-ext"
+                ],
+                "addressLevel2": [
+                  "input#city"
+                ],
+                "addressLevel1": [
+                  "input#state"
+                ],
+                "country": [
+                  "input#country"
+                ],
+                "postalCode": [
+                  "input#postcode"
+                ]
+              },
+              "actions": {
+                "submit": [
+                  "button[type='submit']"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
