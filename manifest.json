@@ -1,0 +1,14 @@
+{
+  "buildId": "test-1",
+  "timestamp": "2026-07-24T00:00:00.000Z",
+  "gitSha": "0000000000000000000000000000000000000000",
+  "maps": {
+    "forms": {
+      "v1": {
+        "filename": "forms.v1.json",
+        "cid": "test-001",
+        "schema": "forms.v1.schema.json"
+      }
+    }
+  }
+}
